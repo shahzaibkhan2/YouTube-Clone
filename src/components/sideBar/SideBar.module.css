@@ -1,0 +1,72 @@
+.sidebar {
+  width: 15%;
+  background: #fff;
+  height: 100vh;
+  padding-left: 2%;
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+}
+
+.shortcut__links img {
+  margin-right: 20px;
+  width: 20px;
+}
+
+.side__link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.sidebar hr {
+  height: 1px;
+  background: #ccc;
+  border: 0;
+  width: 85%;
+}
+
+.subscribed__users h3 {
+  color: #5a5a5a;
+  font-size: 13px;
+  margin: 20px 0;
+}
+
+.subscribed__users img {
+  margin-right: 20px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.mini__sidebar {
+  width: 5%;
+}
+
+.mini__sidebar p {
+  display: none;
+}
+
+.mini__sidebar h3 {
+  display: none;
+}
+
+.mini__sidebar hr {
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+.side__link.active img {
+  border-bottom: 3px solid red;
+  padding-bottom: 2px;
+}
+
+/*  RESPONSIVENESS FOR MEDIUM AND SMALL DEVICES */
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}

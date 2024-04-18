@@ -1,0 +1,41 @@
+.recommended {
+  flex-basis: 35%;
+}
+
+.side__video__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.side__video__list img {
+  width: 50%;
+  flex-basis: 49%;
+  border-radius: 10px;
+}
+
+.video__info {
+  flex-basis: 49%;
+}
+
+.video__info h4 {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #000;
+}
+
+.video__info p {
+  font-size: 14px;
+}
+
+.recommend__channel {
+  color: #000;
+}
+
+/*  RESPONSIVENESS FOR MEDIUM AND SMALL DEVICES */
+
+@media (max-width: 900px) {
+  .recommended {
+    flex-basis: 100%;
+  }
+}

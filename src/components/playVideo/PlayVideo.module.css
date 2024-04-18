@@ -1,0 +1,162 @@
+.playvideo {
+  flex-basis: 64%;
+}
+
+.playvideo iframe {
+  width: 100%;
+  height: 35vw;
+}
+
+.playvideo h3 {
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.play__video__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #5a5a5a;
+}
+
+.play__video__info img {
+  margin-right: 8px;
+  width: 20px;
+}
+
+.play__video__info span {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.playvideo hr {
+  margin: 10px 0;
+  background: #ccc;
+  height: 1px;
+  border: 0;
+}
+
+.publishers {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.publishers div {
+  flex: 1;
+  line-height: 18px;
+}
+
+.publishers img {
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 15px;
+}
+
+.publishers div p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.publishers div span {
+  color: #5a5a5a;
+  font-size: 13px;
+}
+
+.publishers button {
+  background: red;
+  color: #fff;
+  padding: 12px 30px;
+  border: 0;
+  border-radius: 40px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.video__description {
+  padding-left: 55px;
+  margin: 15px 0;
+}
+
+.video__description p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+.video__description h4 {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-top: 15px;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.comment img {
+  margin-right: 15px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.comment h3 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.comment h3 span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #5a5a5a;
+  margin-left: 8px;
+}
+
+.comment__action {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.comment__action img {
+  width: 20px;
+  border-radius: 0;
+  margin-right: 5px;
+}
+
+.comment__action span {
+  color: #5a5a5a;
+  margin-right: 20px;
+}
+
+/*  RESPONSIVENESS FOR MEDIUM AND SMALL DEVICES */
+
+@media (max-width: 900px) {
+  .playvideo {
+    flex-basis: 100%;
+  }
+
+  .playvideo iframe {
+    width: 100%;
+    height: 60vw;
+  }
+
+  .video__description {
+    padding-left: 0;
+  }
+
+  .playvideo .play__video__info span {
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
