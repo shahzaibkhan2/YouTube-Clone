@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "./FeedArea.module.css";
 import { Link } from "react-router-dom";
-import { API_KEY, valueConverter } from "../../apiData.js";
+import { valueConverter } from "../../apiData.js";
+import config from "../../config/config.js";
 import moment from "moment/moment";
 
 const FeedArea = ({ category }) => {
   const [data, setData] = useState([]);
 
   const fetYoutubeApi = async () => {
-    const videoList_Url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
+    const videoList_Url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${config.youtubeApiKey}`;
 
     await fetch(videoList_Url)
       .then((response) => response.json())

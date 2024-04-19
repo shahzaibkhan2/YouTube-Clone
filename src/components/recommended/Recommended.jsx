@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Recommended.module.css";
-import { API_KEY, valueConverter } from "../../apiData.js";
+import { valueConverter } from "../../apiData.js";
+import config from "../../config/config.js";
 import { Link } from "react-router-dom";
 
 const Recommended = ({ categoryId }) => {
   const [recommendData, setRecommendData] = useState([]);
 
   const fetRecommendedApi = async () => {
-    const recommended_Url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=40&regionCode=US&videoCategoryId=${categoryId}&key=${API_KEY}`;
+    const recommended_Url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=40&regionCode=US&videoCategoryId=${categoryId}&key=${config.youtubeApiKey}`;
 
     await fetch(recommended_Url)
       .then((response) => response.json())
