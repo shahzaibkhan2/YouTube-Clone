@@ -1,9 +1,13 @@
 ![HOME PAGE](src/assets/youtube_clone_landing_page.jpg)
-# React + Vite
+# YouTube Clone Developed with React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I Built a fully functional, responsive and beautiful Personal Portfolio Website using JavaScript, HTML and 
+CSS, Git and Github, Redux Toolkit and ECMA Script on ReactJs. This Personal Portfolio is enriched with 
+advanced JavaScript and ECMA Script methods. This Portfolio website is available on my Github ID. I have
+also hosted this website on Vercel. at this address https://shahzaib-khan-portfolio.vercel.app to 
+make it available to the public.
 
-Currently, two official plugins are available:
+Currently, available on:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Vercel](https://shahzaib-khan-portfolio.vercel.app).
+
