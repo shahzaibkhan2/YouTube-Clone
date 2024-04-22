@@ -8,30 +8,37 @@ import { valueConverter } from "../../apiData.js";
 import config from "../../config/config.js";
 import moment from "moment";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  commentDataActions,
+  channelDataActions,
+  videoDataActions,
+} from "../../store";
 
 const PlayVideo = () => {
-  const [videoData, setVideoData] = useState(null);
-  const [channelData, setChannelData] = useState(null);
-  const [commentData, setCommentData] = useState([]);
+  const dispatch = useDispatch();
+  const videoData = useSelector((state) => state.setVideoData.videoData);
+  const channelData = useSelector((state) => state.setVideoData.channelData);
+  const commentData = useSelector((state) => state.setCommentData.commentData);
   const { videoId } = useParams();
 
   const fetchVideoInfo = async () => {
     const videoDetails = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&id=${videoId}&key=${config.youtubeApiKey}`;
-    await fetch(videoDetails)
-      .then((res) => res.json())
-      .then((data) => setVideoData(data.items[0]));
+    const response = await fetch(videoDetails);
+    const data = await response.json();
+    dispatch(videoDataActions.updateVideoData(data.items[0]));
   };
 
   const fetchChannelInfo = async () => {
     const channelApi = `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2C%20contentDetails%2C%20statistics&id=${videoData.snippet.channelId}&key=${config.youtubeApiKey}`;
-    await fetch(channelApi)
-      .then((res) => res.json())
-      .then((data) => setChannelData(data.items[0]));
+    const response = await fetch(channelApi);
+    const data = await response.json();
+    dispatch(channelDataActions.updateChannelData(data.items[0]));
 
     const commentApi = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2C%20replies&maxResults=40&videoId=${videoId}&key=${config.youtubeApiKey}`;
-    await fetch(commentApi)
-      .then((res) => res.json())
-      .then((data) => setCommentData(data.items));
+    const response2 = await fetch(commentApi);
+    const data2 = await response2.json();
+    dispatch(commentDataActions.updateCommentData(data2.items));
   };
 
   useEffect(() => {
