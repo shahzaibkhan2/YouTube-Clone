@@ -4,7 +4,6 @@ import menuOpen from "../../assets/menu_open.svg";
 import logo from "../../assets/shahzaibLogo.png";
 import search from "../../assets/search.png";
 import upload from "../../assets/upload.svg";
-import more from "../../assets/more.png";
 import notification from "../../assets/notification.png";
 import profile from "../../assets/user_profile.jpg";
 import mic from "../../assets/micIcon.svg";

@@ -1,13 +1,18 @@
 import React from "react";
 import styles from "./SideBar.module.css";
 import sideBarImages from "./images";
+import { useDispatch, useSelector } from "react-redux";
+import { categoryActions } from "../../store";
 
-const SideBar = ({ sidebar, category, setCategory }) => {
+const SideBar = ({ sidebar }) => {
+  const category = useSelector((state) => state.setCategory.category);
+  const dispatch = useDispatch();
+
   return (
     <div className={`${styles.sidebar} ${sidebar ? "" : styles.mini__sidebar}`}>
       <div className={`${styles.shortcut__links}`}>
         <div
-          onClick={() => setCategory(0)}
+          onClick={() => dispatch(categoryActions.updateCategory(0))}
           className={`${styles.side__link} ${
             category === 0 ? styles.active : ""
           }`}
@@ -17,7 +22,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
         </div>
 
         <div
-          onClick={() => setCategory(2)}
+          onClick={() => dispatch(categoryActions.updateCategory(2))}
           className={`${styles.side__link} ${
             category === 2 ? styles.active : ""
           }`}
@@ -26,7 +31,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>Automobiles</p>
         </div>
         <div
-          onClick={() => setCategory(17)}
+          onClick={() => dispatch(categoryActions.updateCategory(17))}
           className={`${styles.side__link} ${
             category === 17 ? styles.active : ""
           }`}
@@ -35,7 +40,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>Sports</p>
         </div>
         <div
-          onClick={() => setCategory(22)}
+          onClick={() => dispatch(categoryActions.updateCategory(22))}
           className={`${styles.side__link} ${
             category === 22 ? styles.active : ""
           }`}
@@ -44,7 +49,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>Blogs</p>
         </div>
         <div
-          onClick={() => setCategory(24)}
+          onClick={() => dispatch(categoryActions.updateCategory(24))}
           className={`${styles.side__link} ${
             category === 24 ? styles.active : ""
           }`}
@@ -53,7 +58,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>Entertainment</p>
         </div>
         <div
-          onClick={() => setCategory(20)}
+          onClick={() => dispatch(categoryActions.updateCategory(20))}
           className={`${styles.side__link} ${
             category === 20 ? styles.active : ""
           }`}
@@ -62,7 +67,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>Gaming</p>
         </div>
         <div
-          onClick={() => setCategory(28)}
+          onClick={() => dispatch(categoryActions.updateCategory(28))}
           className={`${styles.side__link} ${
             category === 28 ? styles.active : ""
           }`}
@@ -71,7 +76,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>Technology</p>
         </div>
         <div
-          onClick={() => setCategory(25)}
+          onClick={() => dispatch(categoryActions.updateCategory(25))}
           className={`${styles.side__link} ${
             category === 25 ? styles.active : ""
           }`}
@@ -80,7 +85,7 @@ const SideBar = ({ sidebar, category, setCategory }) => {
           <p>News</p>
         </div>
         <div
-          onClick={() => setCategory(10)}
+          onClick={() => dispatch(categoryActions.updateCategory(10))}
           className={`${styles.side__link} ${
             category === 10 ? styles.active : ""
           }`}

@@ -77,3 +77,24 @@ nav {
     width: 100px;
   }
 }
+
+@media (max-width: 414px) {
+  .nav__middle .search__box {
+    margin-right: 30px;
+    display: flex;
+  }
+
+  .nav__middle .search__box img {
+    width: 13px;
+  }
+
+  .nav__middle .mic {
+    width: 22px;
+    margin-left: -20px;
+  }
+
+  .nav__right .profile__icon {
+    width: 30px;
+    margin-right: -2px;
+  }
+}
