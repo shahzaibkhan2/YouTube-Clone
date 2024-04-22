@@ -1,3 +1,4 @@
+[YouTube Clone](src/assets/youtube_clone_landing_page.jpg)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
