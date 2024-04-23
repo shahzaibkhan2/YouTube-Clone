@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./PlayVideo.module.css";
 import like from "../../assets/like.png";
 import dislike from "../../assets/dislike.png";
@@ -9,11 +9,9 @@ import config from "../../config/config.js";
 import moment from "moment";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  commentDataActions,
-  channelDataActions,
-  videoDataActions,
-} from "../../store";
+import { commentDataActions } from "../../store/commentDataSlice.js";
+import { videoDataActions } from "../../store/videoDataSlice";
+import { channelDataActions } from "../../store/channelDataSlice.js";
 
 const PlayVideo = () => {
   const dispatch = useDispatch();

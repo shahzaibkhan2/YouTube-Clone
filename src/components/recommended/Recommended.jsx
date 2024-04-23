@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./Recommended.module.css";
 import { valueConverter } from "../../apiData.js";
 import config from "../../config/config.js";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { recommendDataActions } from "../../store";
+import { recommendDataActions } from "../../store/recommendDataSlice.js";
 
 const Recommended = ({ categoryId }) => {
   const dispatch = useDispatch();

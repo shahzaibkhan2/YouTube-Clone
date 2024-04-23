@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./SideBar.module.css";
 import sideBarImages from "./images";
 import { useDispatch, useSelector } from "react-redux";
-import { categoryActions } from "../../store";
+import { categoryActions } from "../../store/categorySlice.js";
 
 const SideBar = ({ sidebar }) => {
   const category = useSelector((state) => state.setCategory.category);
