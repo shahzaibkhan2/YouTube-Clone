@@ -10,19 +10,6 @@ const FeedArea = () => {
   const feedData = useSelector((state) => state.feedArea.feedData);
   useFetchFeed();
 
-  // const [data, setData] = useState([]);
-  // const fetYoutubeApi = async () => {
-  //   const videoList_Url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${config.youtubeApiKey}`;
-
-  //   await fetch(videoList_Url)
-  //     .then((response) => response.json())
-  //     .then((data) => useDispatch(feedAreaAction.updateData(data.items)));
-  // };
-
-  // useEffect(() => {
-  //   fetYoutubeApi();
-  // }, [category]);
-
   return (
     <div className={`${styles.feedarea}`}>
       {feedData.map((item, i) => (
