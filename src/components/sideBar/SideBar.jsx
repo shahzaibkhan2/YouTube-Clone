@@ -4,12 +4,17 @@ import sideBarImages from "./images";
 import { useDispatch, useSelector } from "react-redux";
 import { categoryActions } from "../../store/categorySlice.js";
 
-const SideBar = ({ sidebar }) => {
+const SideBar = () => {
   const category = useSelector((state) => state.setCategory.category);
+  const sidebar = useSelector((state) => state.setSidebarSlice.sidebar);
   const dispatch = useDispatch();
 
   return (
-    <div className={`${styles.sidebar} ${sidebar ? "" : styles.mini__sidebar}`}>
+    <div
+      className={`${styles.sidebar} ${
+        sidebar ? styles.transition__sidebar : styles.mini__sidebar
+      }`}
+    >
       <div className={`${styles.shortcut__links}`}>
         <div
           onClick={() => dispatch(categoryActions.updateCategory(0))}

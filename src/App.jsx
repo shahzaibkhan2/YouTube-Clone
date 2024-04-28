@@ -5,12 +5,11 @@ import Home from "./pages/home/Home.jsx";
 import VideoPlayer from "./pages/videoPlayer/VideoPlayer.jsx";
 
 const App = () => {
-  const [sidebar, setSidebar] = useState(true);
   return (
     <div>
-      <NavBar setSidebar={setSidebar} />
+      <NavBar />
       <Routes>
-        <Route path="/" element={<Home sidebar={sidebar} />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="/videoPlayer/:categoryId/:videoId"
           element={<VideoPlayer />}

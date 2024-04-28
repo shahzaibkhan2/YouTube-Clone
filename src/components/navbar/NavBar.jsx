@@ -8,14 +8,18 @@ import notification from "../../assets/notification.png";
 import profile from "../../assets/user_profile.jpg";
 import mic from "../../assets/micIcon.svg";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { sidebarActions } from "../../store/sidebarSlice";
 
-const NavBar = ({ setSidebar }) => {
+const NavBar = () => {
+  const dispatch = useDispatch();
+
   return (
     <nav className={`flex__box`}>
       <div className={`${styles.nav__left}  flex__box`}>
         <img
           className={`${styles.menu__icon}`}
-          onClick={() => setSidebar((prev) => (prev === false ? true : false))}
+          onClick={() => dispatch(sidebarActions.setSidebar())}
           src={menuOpen}
           alt="Menu"
         />
@@ -26,7 +30,7 @@ const NavBar = ({ setSidebar }) => {
 
       <div className={`${styles.nav__middle} flex__box`}>
         <div className={`${styles.search__box}`}>
-          <input type="text" placeholder="Search Here" />
+          <input type="text" placeholder="Search" />
           <img src={search} alt="Search" />
         </div>
         <div className={`${styles.mic}`}>

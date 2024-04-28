@@ -81,7 +81,7 @@ nav {
 @media (max-width: 414px) {
   .nav__middle .search__box {
     margin-right: 30px;
-    display: flex;
+    display: block;
   }
 
   .nav__middle .search__box img {

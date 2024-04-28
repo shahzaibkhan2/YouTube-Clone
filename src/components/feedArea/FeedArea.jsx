@@ -1,27 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./FeedArea.module.css";
 import { Link } from "react-router-dom";
 import { valueConverter } from "../../apiData.js";
-import config from "../../config/config.js";
 import moment from "moment/moment";
-import { useDispatch, useSelector } from "react-redux";
-import { feedAreaAction } from "../../store/feedAreaSlice.js";
+import { useSelector } from "react-redux";
+import useFetchFeed from "../../hooks/useFetchFeed";
 
-const FeedArea = ({ category }) => {
+const FeedArea = () => {
   const feedData = useSelector((state) => state.feedArea.feedData);
-  const dispatch = useDispatch();
-
-  const fetYoutubeApi = async () => {
-    const videoList_Url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${config.youtubeApiKey}`;
-
-    const response = await fetch(videoList_Url);
-    const data = await response.json();
-    dispatch(feedAreaAction.updateData(data.items));
-  };
-
-  useEffect(() => {
-    fetYoutubeApi();
-  }, [category]);
+  useFetchFeed();
 
   // const [data, setData] = useState([]);
   // const fetYoutubeApi = async () => {

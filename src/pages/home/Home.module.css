@@ -1,16 +1,11 @@
 .container {
-  padding: 20px 2% 20px 17%;
+  padding: 20px 2% 20px 7%;
   background: #f9f9f9;
-}
-
-.big__container {
-  padding-left: 7%;
 }
 
 /*  RESPONSIVENESS FOR MEDIUM AND SMALL DEVICES */
 
 @media (max-width: 900px) {
-  .big__container,
   .container {
     padding-right: 5%;
     padding-left: 5%;

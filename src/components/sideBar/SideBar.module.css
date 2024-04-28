@@ -1,16 +1,25 @@
 .sidebar {
   width: 15%;
-  background: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0)
+  );
   height: 100vh;
   padding-left: 2%;
   padding-top: 80px;
   position: fixed;
   top: 0;
+  backdrop-filter: blur(2px);
 }
 
 .shortcut__links img {
   margin-right: 20px;
   width: 20px;
+}
+
+.shortcut__links p {
+  font-weight: 600;
 }
 
 .side__link {
@@ -35,6 +44,10 @@
   margin: 20px 0;
 }
 
+.subscribed__users p {
+  font-weight: 600;
+}
+
 .subscribed__users img {
   margin-right: 20px;
   width: 25px;
@@ -43,6 +56,11 @@
 
 .mini__sidebar {
   width: 5%;
+  transition: 0.3s ease;
+}
+
+.transition__sidebar {
+  transition: 0.3s ease;
 }
 
 .mini__sidebar p {
